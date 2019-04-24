@@ -1,6 +1,6 @@
 # sequelize/cli [![npm version](https://badge.fury.io/js/sequelize-cli.svg)](https://badge.fury.io/js/sequelize-cli) [![Build Status](https://travis-ci.org/sequelize/cli.svg?branch=master)](https://travis-ci.org/sequelize/cli) [![Greenkeeper badge](https://badges.greenkeeper.io/sequelize/cli.svg)](https://greenkeeper.io/)
 
-The Sequelize Command Line Interface (CLI)
+The Sequelize Command Line Interface (CLI) + DLC: model class definition
 
 ## Table of Contents
 - [Installation](#installation)
@@ -13,7 +13,7 @@ The Sequelize Command Line Interface (CLI)
 Install CLI globally with
 
 ```bash
-$ npm install -g sequelize-cli
+$ npm install -g sequelize-cli-model-class
 ```
 
 Now you can run CLI using following command anywhere
@@ -26,7 +26,7 @@ $ sequelize
 Install CLI locally to your `node_modules` folder with
 
 ```bash
-$ npm install --save sequelize-cli
+$ npm install --save sequelize-cli-model-class
 ```
 
 You should be able to run CLI with
