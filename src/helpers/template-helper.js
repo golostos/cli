@@ -7,7 +7,7 @@ module.exports = {
     options = _.assign({
       beautify: true,
       indent_size: 2,
-      preserve_newlines: false
+      preserve_newlines: true
     }, options || {});
 
     const template = helpers.asset.read(path);

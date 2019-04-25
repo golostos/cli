@@ -1,5 +1,4 @@
 'use strict';
-
 const Model = require('sequelize').Model;
 
 class <%= name %> extends Model {
@@ -10,14 +9,10 @@ class <%= name %> extends Model {
 
 module.exports = (sequelize, DataTypes) => {
   <%= name %>.init({
-    <% attributes.forEach(function(attribute, index) { %>
-      <%= attribute.fieldName %>: DataTypes.<%= attribute.dataFunction ? `${attribute.dataFunction.toUpperCase()}(DataTypes.${attribute.dataType.toUpperCase()})` : attribute.dataValues ? `${attribute.dataType.toUpperCase()}(${attribute.dataValues})` : attribute.dataType.toUpperCase() %>
-      <%= (Object.keys(attributes).length - 1) > index ? ',' : '' %>
-    <% }) %>
+    <% attributes.forEach(function(attribute, index) { %><%= attribute.fieldName %>: DataTypes.<%= attribute.dataFunction ? `${attribute.dataFunction.toUpperCase()}(DataTypes.${attribute.dataType.toUpperCase()})` : attribute.dataValues ? `${attribute.dataType.toUpperCase()}(${attribute.dataValues})` : attribute.dataType.toUpperCase() %><%= (Object.keys(attributes).length - 1) > index ? ',' : '' %><% }) %>
   }, {
     sequelize,
-    modelName: '<%= name %>',
-    <%= underscored ? 'underscored: true,' : '' %>
+    modelName: '<%= name %>',<%= underscored ? '\nunderscored: true,' : '' %>
   });
   return <%= name %>;
 };
