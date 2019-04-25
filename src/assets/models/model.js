@@ -1,7 +1,7 @@
 'use strict';
 
-const {Model} = require('sequelize');
-<%= '\n' %>
+const Model = require('sequelize').Model;
+
 class <%= name %> extends Model {
   static associate(models) {
     // associations can be defined here
